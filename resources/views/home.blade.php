@@ -14,14 +14,14 @@
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Slug</th>
-      <th scope="col">Type</th>
-      <th scope="col">Category</th>
-      <th scope="col">Weight</th>
-      <th scope="col">Cost</th>
-      <th scope="col">Damage Dice</th>
+      <th class="text-danger" scope="col">ID</th>
+      <th class="text-danger" scope="col">Name</th>
+      <th class="text-danger" scope="col">Slug</th>
+      <th class="text-danger" scope="col">Type</th>
+      <th class="text-danger" scope="col">Category</th>
+      <th class="text-danger" scope="col">Weight</th>
+      <th class="text-danger" scope="col">Cost</th>
+      <th class="text-danger" scope="col">Damage Dice</th>
       
     </tr>
   </thead>
