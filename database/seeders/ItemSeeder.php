@@ -36,7 +36,6 @@ class ItemSeeder extends Seeder
 
     public function run(): void
     {
-
         DB::table('items')->truncate();
 
         $data = $this->getCSVData(__DIR__.'/items.csv');

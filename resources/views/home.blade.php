@@ -28,14 +28,14 @@
   <tbody>
     @foreach ($items as $item)
     <tr>
-      <th scope="row">{{$item->id }}</th>
+      <th scope="row">{{ $item->id }}</th>
       <td>{{ $item->name }}</td>
       <td>{{ $item->slug }}</td>
       <td>{{ $item->type }}</td>
       <td>{{ $item->category }}</td>
-      <td> {{ $item->weight }}</td>
+      <td>{{ $item->weight }}</td>
       <td>{{ $item->cost }}</td>
-      <td> {{$item->damage_dice }}</td>
+      <td>{{ $item->damage_dice }}</td>
     </tr>     
     @endforeach
   </tbody>
