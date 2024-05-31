@@ -24,6 +24,9 @@
                 <td>{{ $character->defence }}</td>
                 <td>{{ $character->speed }}</td>
                 <td>{{ $character->life }}</td>
+                <td>
+                  <a href="{{route('characters.show', $character)}}" class="btn btn-primary">Detail</a>
+                </td>
             </tr>
           @endforeach
         </tbody>

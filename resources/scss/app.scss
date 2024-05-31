@@ -1,8 +1,12 @@
 @use "~bootstrap/scss/bootstrap";
 
-h1 {
-    background-color: #db3545;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
+// h1 {
+//     background-color: #db3545;
+//     color: white;
+//     padding: 20px;
+//     border-radius: 5px;
+// }
+
+ul, li {
+    list-style: none;
 }
