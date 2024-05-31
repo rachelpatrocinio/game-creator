@@ -12,31 +12,31 @@
     
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <input type="text" class="form-control" id="description" name="description">
+            <input type="text" class="form-control" id="description" name="description" value="{{old('description')}}">
         </div>
         
         <div class="mb-3">
             <label for="attack" class="form-label">Atk</label>
-            <input type="text" class="form-control" id="attack" name="attack">
+            <input type="text" class="form-control" id="attack" name="attack" value="{{old('attack')}}">
         </div>
 
         <div class="mb-3">
             <label for="defence" class="form-label">Def</label>
-            <input type="text" class="form-control" id="defence" name="defence">
+            <input type="text" class="form-control" id="defence" name="defence" value="{{old('defence')}}">
         </div>
 
         <div class="mb-3">
             <label for="speed" class="form-label">Speed</label>
-            <input type="text" class="form-control" id="speed" name="speed">
+            <input type="text" class="form-control" id="speed" name="speed" value="{{old('speed')}}">
         </div>
 
         <div class="mb-3">
             <label for="life" class="form-label">HP</label>
-            <input type="text" class="form-control" id="life" name="life">
+            <input type="text" class="form-control" id="life" name="life" value="{{old('life')}}">
         </div>
         <div class="d-flex justify-content-between">
             <a href="{{route('characters.index')}}" class="btn btn-primary">Go back</a>

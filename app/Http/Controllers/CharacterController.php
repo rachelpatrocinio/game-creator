@@ -63,7 +63,9 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        //
+        
+        return view('characters.edit',compact('character'));
+
     }
 
     /**
