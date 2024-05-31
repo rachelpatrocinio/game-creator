@@ -39,12 +39,27 @@
             <input type="text" class="form-control" id="life" name="life">
         </div>
         <div class="d-flex justify-content-between">
-            <button type="submit" class="btn btn-primary">Crea</button>
             <a href="{{route('characters.index')}}" class="btn btn-primary">Go back</a>
+            <button type="submit" class="btn btn-success">Crea</button>
         </div>
 
-    
     </form>
+
+    <div class="my-4">
+        @if ( $errors->any() )
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                <li>
+                    {{ $error }}
+                </li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    </div>
+
+
 </div>
 
 
