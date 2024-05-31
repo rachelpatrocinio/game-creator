@@ -8,18 +8,19 @@
         <thead>
           <tr>
             <th scope="col">Name</th>
-            <th scope="col">Description</th>
-            <th scope="col">Attack</th>
-            <th scope="col">Defence</th>
+            {{-- <th scope="col">Description</th> --}}
+            <th scope="col">Atk</th>
+            <th scope="col">Def</th>
             <th scope="col">Speed</th>
-            <th scope="col">Life</th>
+            <th scope="col">HP</th>
+            <th scope="col">More</th>
           </tr>
         </thead>
         <tbody>
             @foreach ($characters as $character)
             <tr>
                 <th scope="row">{{ $character->name }}</th>
-                <td>{{ $character->description }}</td>
+                {{-- <td>{{ $character->description }}</td> --}}
                 <td>{{ $character->attack }}</td>
                 <td>{{ $character->defence }}</td>
                 <td>{{ $character->speed }}</td>
