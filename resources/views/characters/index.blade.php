@@ -32,6 +32,9 @@
           @endforeach
         </tbody>
       </table>
+        <div>
+          <a href="{{route('characters.create')}}" class="btn btn-success">Crea un personaggio</a>
+        </div>
 </div>
 
 
