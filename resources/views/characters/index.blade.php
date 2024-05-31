@@ -14,6 +14,7 @@
             <th scope="col">Speed</th>
             <th scope="col">HP</th>
             <th scope="col">More</th>
+            <th scope="col">Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -28,12 +29,15 @@
                 <td>
                   <a href="{{route('characters.show', $character)}}" class="btn btn-primary">Detail</a>
                 </td>
+                <td>
+                  <a href="{{route('characters.edit', $character)}}" class="btn btn-warning">Edit</a>
+                </td>
             </tr>
           @endforeach
         </tbody>
       </table>
         <div>
-          <a href="{{route('characters.create')}}" class="btn btn-success">Crea un personaggio</a>
+          <a href="{{route('characters.create')}}" class="btn btn-success">Create new Character</a>
         </div>
 </div>
 
