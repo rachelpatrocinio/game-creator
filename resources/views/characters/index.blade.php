@@ -15,6 +15,7 @@
             <th scope="col">HP</th>
             <th scope="col">More</th>
             <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +32,14 @@
                 </td>
                 <td>
                   <a href="{{route('characters.edit', $character)}}" class="btn btn-warning">Edit</a>
+                </td>
+                <td>
+                  <form action="{{route('characters.destroy', $character)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger">Delete</button>
+
+                  </form>
                 </td>
             </tr>
           @endforeach
