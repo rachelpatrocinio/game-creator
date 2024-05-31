@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  @vite ('resources/js/app.js')
-  <title>Document</title>
-</head>
+@section('title','Home')
 
-<body>
+@section('content')
 
   <div class="container">
     <h1 class="text-center mb-5">Game Creator by Boolean's Team 3</h1>
@@ -45,6 +38,4 @@
 
   </div>
 
-</body>
-
-</html>
+@endsection
