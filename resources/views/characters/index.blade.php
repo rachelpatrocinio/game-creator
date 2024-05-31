@@ -32,10 +32,10 @@
               <td>{{ $character->speed }}</td>
               <td>{{ $character->life }}</td>
               <td>
-                <a href="{{route('characters.show', $character)}}" class="btn btn-primary">Detail</a>
+                <a href="{{route('characters.show', $character)}}" class="btn btn-success">Detail</a>
               </td>
               <td>
-                <a href="{{route('characters.edit', $character)}}" class="btn btn-warning">Edit</a>
+                <a href="{{route('characters.edit', $character)}}" class="btn btn-light">Edit</a>
               </td>
               <td>
                 <form action="{{route('characters.destroy', $character)}}" method="POST">
