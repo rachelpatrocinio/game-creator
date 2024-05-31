@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    
+
     <h1 class="text-center fs-1">Crea il personaggio!</h1>
 
     <form action="{{route('characters.update', $character)}}" method="POST">
@@ -41,8 +41,8 @@
             <input type="text" class="form-control" id="life" name="life" value="{{old('life', $character->life)}}">
         </div>
         <div class="d-flex justify-content-between">
-            <a href="{{route('characters.index')}}" class="btn btn-primary">Go back</a>
-            <button type="submit" class="btn btn-warning">Salva</button>
+            <a href="{{route('characters.index')}}" class="btn btn-primary btn-lg">Go back</a>
+            <button type="submit" class="btn btn-warning btn-lg">Save</button>
         </div>
 
     </form>
@@ -62,6 +62,7 @@
     </div>
 
 </div>
+
 
 
 @endsection

@@ -19,7 +19,7 @@
                         <li>HP: {{$character->life}}</li>
                     </ul>
                     <div class="d-flex justify-content-center gap-5">
-                        <a href="{{route('characters.index')}}" class="btn btn-success btn-lg ">Lista</a>
+                        <a href="{{route('characters.index')}}" class="btn btn-success btn-lg ">List</a>
                         <a href="{{route('characters.edit', $character)}}" class="btn btn-light btn-lg ">Edit</a>
                         <form action="{{route('characters.destroy', $character)}}" method="POST">
                             @csrf
