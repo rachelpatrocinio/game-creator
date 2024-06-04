@@ -42,9 +42,10 @@
         </div>
         <div class="d-flex justify-content-between">
             <a href="{{route('characters.index')}}" class="btn btn-primary btn-lg">Go back</a>
-            <button type="submit" class="btn btn-warning btn-lg">Save</button>
+            <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Save 
+            </button>
         </div>
-
     </form>
 
     <div class="my-4">
