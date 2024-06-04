@@ -17,6 +17,10 @@
             <input type="text" class="form-control" id="name" name="name" value="{{old('name', $character->name)}}">
         </div>
         <div class="mb-3">
+            <label for="url_img" class="form-label">URL img</label>
+            <input type="text" class="form-control" id="url_img" name="url_img" value="{{old('url_img', $character->url_img)}}">
+        </div>
+        <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <input type="text" class="form-control" id="description" name="description" value="{{old('description', $character->description)}}">
         </div>
@@ -30,23 +34,21 @@
             <label for="defence" class="form-label">Def</label>
             <input type="text" class="form-control" id="defence" name="defence" value="{{old('defence', $character->defence)}}">
         </div>
-
         <div class="mb-3">
             <label for="speed" class="form-label">Speed</label>
             <input type="text" class="form-control" id="speed" name="speed" value="{{old('speed', $character->speed)}}">
         </div>
-
         <div class="mb-3">
             <label for="life" class="form-label">HP</label>
             <input type="text" class="form-control" id="life" name="life" value="{{old('life', $character->life)}}">
         </div>
         <div class="d-flex justify-content-between">
             <a href="{{route('characters.index')}}" class="btn btn-primary btn-lg">Go back</a>
-            <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Save 
-            </button>
+            <button type="submit" class="btn btn-warning btn-lg">save</button>
         </div>
     </form>
+
+
 
     <div class="my-4">
         @if ( $errors->any() )

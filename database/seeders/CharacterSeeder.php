@@ -23,6 +23,7 @@ class CharacterSeeder extends Seeder
             $new_character = new Character();
 
             $new_character->name = $faker->name();
+            $new_character->url_img = $faker->url();
             $new_character->description = $faker->text();
             $new_character->attack = $faker->randomDigit();
             $new_character->defence = $faker->randomDigit();

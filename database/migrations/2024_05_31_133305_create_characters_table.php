@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
+            $table->string('url_img');
             $table->string('name', 200);
             $table->text('description');
             $table->integer('attack');

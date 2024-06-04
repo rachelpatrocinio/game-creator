@@ -11,6 +11,7 @@ class Character extends Model
 
     protected $fillable = [
         'name',
+        'url_img',
         'description',
         'attack',
         'defence',

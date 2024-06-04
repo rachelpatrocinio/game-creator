@@ -8,6 +8,7 @@
         <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
             <div class="text-center">
                 <div>
+                    <img src="{{ $character->url_img }}" alt="">
                     <h1>Nome: {{$character->name}}</h1>
                     <p>{{$character->description}}</p>
                 </div>
