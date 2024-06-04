@@ -44,7 +44,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                            <a class="nav-link" href="{{url('/items') }}">{{ __('items') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/characters') }}">{{ __('characters') }}</a>
                         </li>
                     </ul>
 
