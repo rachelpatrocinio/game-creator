@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Character;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class CharacterController extends Controller
@@ -24,8 +25,8 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        //
-        return view('characters.create');
+        $items = Item::orderBy('name', 'asc')->get();
+        return view('characters.create', compact('items'));
     }
 
     /**
@@ -41,12 +42,17 @@ class CharacterController extends Controller
             'attack'=>'required|min:0|max:9|numeric',
             'defence'=>'required|min:0|max:9|numeric',
             'speed'=>'required|min:1|max:9|numeric',
-            'life'=>'required|min:10|max:100|numeric'
+            'life'=>'required|min:10|max:100|numeric',
+            'items'=>'required|exists:items,id'
         ]);
 
         $form_data = $request->all();
 
         $new_character = Character::create($form_data);
+
+        if($request->has('items')){
+            $new_character->items()->attach($request->items);
+        }
 
         return to_route('characters.show', $new_character);
     }

@@ -43,6 +43,19 @@
                 <label for="life" class="form-label">HP</label>
                 <input type="text" class="form-control" id="life" name="life" value="{{old('life')}}">
             </div>
+
+            <div class="mb-3">
+                <label for="weapons" class="form-label">Weapons:</label>
+                <div class="form-check d-flex flex-wrap">
+                    @foreach($items as $item)
+                    <div class="col-2">
+                        <input @checked(in_array($item->id, old('items',[]))) name="items[]" type="checkbox" value="{{$item->id}}" id="item-{{$item->id}}">
+                        <label for="item-{{$item->id}}">{{ $item->name }}</label>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
             <div class="d-flex justify-content-between">
                 <a href="{{route('characters.index')}}" class="btn btn-primary btn-lg">Go back</a>
                 <button type="submit" class="btn btn-success btn-lg">Create</button>
