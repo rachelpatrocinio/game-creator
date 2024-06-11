@@ -21,12 +21,21 @@ class CharacterSeeder extends Seeder
         // DB::table('characters')->truncate();
 
         $item_ids = Item::all()->pluck('id')->all();
+        $imgs = [
+            'Barbaro.png',
+            'Chierico.webp',
+            'Druido.png',
+            'Mago.png',
+            'Monaco.png',
+            'Paladino.png',
+            'Warlock.png'
+        ];
 
         for ($i = 0; $i < 10; $i++) {
             $new_character = new Character();
 
             $new_character->name = $faker->name();
-            $new_character->url_img = $faker->url();
+            $new_character->url_img = $faker->randomElement($imgs);
             $new_character->description = $faker->text();
             $new_character->attack = $faker->randomDigit();
             $new_character->defence = $faker->randomDigit();
