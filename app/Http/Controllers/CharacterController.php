@@ -70,8 +70,9 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        
-        return view('characters.edit',compact('character'));
+        $character->load(['items']);
+        $items = Item::orderBy('name', 'asc')->get();
+        return view('characters.edit',compact('character', 'items'));
 
     }
 
@@ -88,12 +89,20 @@ class CharacterController extends Controller
             'attack'=>'required|min:0|max:9|numeric',
             'defence'=>'required|min:0|max:9|numeric',
             'speed'=>'required|min:1|max:9|numeric',
-            'life'=>'required|min:10|max:100|numeric'
+            'life'=>'required|min:10|max:100|numeric',
+            'items'=>'required|exists:items,id'
         ]);
 
         $form_data = $request->all();
 
         $character->update($form_data);
+
+        if($request->has('items')){
+            $character->items()->sync($request->items);
+        }
+        else{
+            $character->items()->detach();
+        }
 
         return to_route('characters.index', $character);
     }
