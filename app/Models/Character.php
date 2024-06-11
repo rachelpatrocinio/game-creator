@@ -18,4 +18,8 @@ class Character extends Model
         'speed',
         'life'
     ];
+
+    public function items(){
+        return $this->belongsToMany(Item::class);
+    }
 }

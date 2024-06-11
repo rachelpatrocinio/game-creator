@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 use Faker\Generator as Faker;
 use App\Models\Character;
+use App\Models\Item;
 use Illuminate\Support\Facades\DB;
 
 class CharacterSeeder extends Seeder
@@ -17,7 +18,9 @@ class CharacterSeeder extends Seeder
     public function run(Faker $faker): void
     {
 
-        DB::table('characters')->truncate();
+        // DB::table('characters')->truncate();
+
+        $item_ids = Item::all()->pluck('id')->all();
 
         for ($i = 0; $i < 10; $i++) {
             $new_character = new Character();
@@ -31,6 +34,9 @@ class CharacterSeeder extends Seeder
             $new_character->life = $faker->numberBetween(10,100);
 
             $new_character->save();
+
+            $random_item_ids = $faker->randomElement($item_ids);      
+            $new_character->items()->attach($random_item_ids);      
         }
     }
 }
