@@ -20,7 +20,7 @@
                             <a href="{{ route('characters.show', $character)}}">{{ $character->name }}</a>
                         </h5>
                         <img src="{{ Vite::asset("public/img/img_characters/$character->url_img")}}" alt="">
-                        <ul class="infos d-flex p-4">
+                        <ul class="infos p-4">
                             <li>
                                 <strong>Atk:</strong> 
                                 {{$character->attack}}
