@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
 
             $table->primary(['character_id', 'item_id']);
+            $table->integer('qty')->default(1);
         });
     }
 

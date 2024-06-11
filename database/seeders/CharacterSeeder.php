@@ -44,8 +44,8 @@ class CharacterSeeder extends Seeder
 
             $new_character->save();
 
-            $random_item_ids = $faker->randomElements($item_ids, 2);      
-            $new_character->items()->attach($random_item_ids);      
+            $random_item_ids = $faker->randomElements($item_ids, $faker->numberBetween(1,5));      
+            $new_character->items()->attach($random_item_ids, ['qty' => $faker->numberBetween(1,9)]);
         }
     }
 }
