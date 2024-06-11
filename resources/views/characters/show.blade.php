@@ -11,6 +11,7 @@
                     <img src="{{ Vite::asset("public/img_characters/$character->url_img")}}" alt="">
                     <h1>Nome: {{$character->name}}</h1>
                     <p>{{$character->description}}</p>
+                    <p>{{$character->type->name}}</p>
                 </div>
                 <div>
                     <ul class="p-0">
