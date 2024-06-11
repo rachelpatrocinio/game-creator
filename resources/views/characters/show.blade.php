@@ -14,10 +14,27 @@
                 </div>
                 <div>
                     <ul class="p-0">
-                        <li>Atk: {{$character->attack}}</li>
-                        <li>Def: {{$character->defence}}</li>
-                        <li>Speed: {{$character->speed}}</li>
-                        <li>HP: {{$character->life}}</li>
+                        <li>
+                            <strong>Atk:</strong> 
+                            {{$character->attack}}
+                        </li>
+                        <li>
+                            <strong>Def:</strong>
+                            {{$character->defence}}</li>
+                        <li>
+                            <strong>Speed:</strong>
+                            {{$character->speed}}</li>
+                        <li>
+                            <strong>HP:</strong>
+                            {{$character->life}}</li>
+                        <li>
+                            <strong>Weapons:</strong>
+                            <ul class="p-0">
+                                @foreach($character->items as $weapon)
+                                <li>{{$weapon->name}}</li>
+                                @endforeach
+                            </ul>
+                        </li>
                     </ul>
                     <div class="d-flex justify-content-center gap-5">
                         <a href="{{route('characters.index')}}" class="btn btn-success btn-lg ">List</a>
