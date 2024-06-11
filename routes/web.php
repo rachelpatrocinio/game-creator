@@ -3,6 +3,8 @@
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Character;
+use App\Models\Item;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +19,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $characters = Character::all();
+    $items = Item::all();
+    return view('home', compact('characters', 'items'));
 });
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/items', [ItemController::class, 'home'])->name('home');
-
+    Route::resource('items', ItemController::class);
     Route::resource('characters', CharacterController::class);
 
 });

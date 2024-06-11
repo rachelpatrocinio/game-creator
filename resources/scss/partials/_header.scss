@@ -1,0 +1,10 @@
+.main-header{
+    background-color: #E7E7DB;
+}
+
+.nav-item a{
+    &:hover{
+        color: #E00103;
+        scale: 1.1;
+    }
+}

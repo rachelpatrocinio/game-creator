@@ -1,9 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
-ul, li {
-    list-style: none;
-}
+@import 'partials/reset';
+@import 'partials/layout';
+@import 'partials/header';
+@import 'partials/home';
+@import 'partials/footer';
 
-a {
-    text-decoration: none;
-    color: currentColor;
-}
+
