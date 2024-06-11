@@ -20,7 +20,9 @@
   <div class="container">
     <div class="row">
       <div class="section-title">
-        <img src="{{Vite::asset('public/img/logo/characters.png')}}" alt="">
+        <a href="{{ route('characters.index')}}">
+          <img src="{{Vite::asset('public/img/logo/characters.png')}}" alt="Characters">
+        </a>
       </div>
     </div>
   </div>
@@ -32,7 +34,7 @@
           <a href="{{ route('characters.show', $character)}}">{{ $character->name }}</a>
         </h3>
         <img src="{{ Vite::asset("public/img/img_characters/$character->url_img")}}" alt="">
-        <ul class="p-4">
+        <ul class=" infos p-4">
           <li>
               <strong>Atk:</strong> 
               {{$character->attack}}
@@ -64,7 +66,7 @@
       </div>
       <div class="weapons-list d-flex flex-wrap py-5">
         @foreach($items as $item)
-        <div class="col-2">
+        <div class="col-2 text-center">
           <h6>{{ $item->name }}</h6>
         </div>
         @endforeach

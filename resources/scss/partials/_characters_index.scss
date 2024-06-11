@@ -1,0 +1,42 @@
+.cards{
+    .card{
+
+        img{
+            aspect-ratio: 1/1;
+            object-fit: contain;
+        }
+
+        ul.infos{
+            border: 0.5px solid black;
+            border-radius: 20px;
+            padding: 50px;
+    
+            li{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .buttons a{
+            border: 1px solid #DF0201F4;
+            color: #DF0201;
+
+            &:hover{
+                scale: 1.1;
+            }
+        }
+    }
+}
+
+.card{
+    .buttons a{
+        border: 1px solid #DF0201F4;
+        color: #DF0201;
+    }
+
+    ul.infos{
+        border: 0.5px solid black;
+        border-radius: 20px;
+    }
+
+}
