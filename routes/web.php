@@ -3,8 +3,11 @@
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TypeController;
+
 use App\Models\Character;
 use App\Models\Item;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('items', ItemController::class);
     Route::resource('characters', CharacterController::class);
+    Route::resource('types', TypeController::class)->only(['index','show']);
 
 });
 

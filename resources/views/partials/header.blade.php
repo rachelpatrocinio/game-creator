@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/items') }}">{{ __('WEAPONS') }}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/types') }}">{{ __('CLASSES') }}</a>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav ml-auto">

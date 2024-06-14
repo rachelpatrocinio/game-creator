@@ -8,7 +8,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th class="text-danger" scope="col">ID</th>
+        <th class="text-danger" scope="col">#</th>
         <th class="text-danger" scope="col">Name</th>
         <th class="text-danger" scope="col">Slug</th>
         <th class="text-danger" scope="col">Type</th>
