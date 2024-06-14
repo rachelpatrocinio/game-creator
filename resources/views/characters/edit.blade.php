@@ -3,7 +3,7 @@
 @section('title','Modify')
 
 @section('content')
-<div class="container">
+<div class="container my-5">
 
     <h1 class="text-center fs-1">Modifica il personaggio!</h1>
 
@@ -42,6 +42,16 @@
             <label for="life" class="form-label">HP</label>
             <input type="text" class="form-control" id="life" name="life" value="{{old('life', $character->life)}}">
         </div>
+
+        <div class="mb-3">
+            <label for="type_id" class="form-label">Class</label>
+            <select name="type_id" id="type_id" class="form-select">
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" @selected($type->id == old('type_id', $character->type_id))>{{ $type->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
         <div class="mb-3">
             <label for="weapons" class="form-label">Weapons:</label>
             <div class="form-check d-flex flex-wrap">

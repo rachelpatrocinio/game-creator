@@ -75,7 +75,8 @@ class CharacterController extends Controller
     {
         $character->load(['items']);
         $items = Item::orderBy('name', 'asc')->get();
-        return view('characters.edit',compact('character', 'items'));
+        $types = Type::orderBy('name', 'asc')->get();
+        return view('characters.edit',compact('character', 'items', 'types'));
 
     }
 
@@ -93,7 +94,8 @@ class CharacterController extends Controller
             'defence'=>'required|min:0|max:9|numeric',
             'speed'=>'required|min:1|max:9|numeric',
             'life'=>'required|min:10|max:100|numeric',
-            'items'=>'required|exists:items,id'
+            'items'=>'required|exists:items,id',
+            'type_id'=>'required|exists:types,id'
         ]);
 
         $form_data = $request->all();
