@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-  <table class="table">
+  <table class="table my-5">
     <thead>
       <tr>
         <th class="text-danger" scope="col">#</th>
