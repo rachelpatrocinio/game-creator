@@ -69,7 +69,26 @@
                 <div class="weapons-list d-flex flex-wrap py-5">
                     @foreach ($items as $item)
                         <div class="col-2 text-center">
-                            <h6>{{ $item->name }}</h6>
+                            <p class="fs-5">{{ $item->name }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="types mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="section-title d-flex justify-content-center">
+                    <img src="{{ Vite::asset('public/img/logo/types.png') }}" alt="">
+                </div>
+                <div class="d-flex flex-wrap py-5 justify-content-around">
+                    @foreach ($types as $type)
+                        <div class="col-2 text-center">
+                            <h4>{{ $type->name }}</h4>
+                            <p>{{ $type->description }}</p>
+                            
                         </div>
                     @endforeach
                 </div>

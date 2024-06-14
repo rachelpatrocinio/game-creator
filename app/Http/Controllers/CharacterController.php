@@ -39,7 +39,7 @@ class CharacterController extends Controller
 
         $request->validate([
             'name'=>'required|max:200',
-            'url_img'=>'required|url',
+            'url_img'=>'required',
             'description'=>'required|max:1000',
             'attack'=>'required|min:0|max:9|numeric',
             'defence'=>'required|min:0|max:9|numeric',
@@ -88,7 +88,7 @@ class CharacterController extends Controller
 
         $request->validate([
             'name'=>'required|max:200',
-            'url_img'=>'required|url',
+            'url_img'=>'required',
             'description'=>'required|max:1000',
             'attack'=>'required|min:0|max:9|numeric',
             'defence'=>'required|min:0|max:9|numeric',

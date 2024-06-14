@@ -5,7 +5,7 @@
 @section('content')
 <div class="container my-5">
 
-    <h1 class="text-center fs-1">Modifica il personaggio!</h1>
+    <h1 class="text-center fs-1">Edit your Character!</h1>
 
     <form action="{{route('characters.update', $character)}}" method="POST">
         @csrf
@@ -17,8 +17,8 @@
             <input type="text" class="form-control" id="name" name="name" value="{{old('name', $character->name)}}">
         </div>
         <div class="mb-3">
-            <label for="url_img" class="form-label">URL img</label>
-            <input type="text" class="form-control" id="url_img" name="url_img" value="{{old('url_img', $character->url_img)}}">
+            <label for="url_img" class="form-label">Image</label>
+            <input type="text" class="form-control" id="url_img" name="url_img" value="{{old('url_img', "http://127.0.0.1:8000/public/img/img_characters/$character->url_img")}}">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>

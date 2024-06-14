@@ -7,6 +7,7 @@ use App\Http\Controllers\TypeController;
 
 use App\Models\Character;
 use App\Models\Item;
+use App\Models\Type;
 
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +25,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $characters = Character::all();
     $items = Item::all();
-    return view('home', compact('characters', 'items'));
+    $types = Type::all();
+    return view('home', compact('characters', 'items', 'types'));
 });
 
 Route::middleware('auth')->group(function () {
