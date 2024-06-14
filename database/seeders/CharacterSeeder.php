@@ -49,8 +49,18 @@ class CharacterSeeder extends Seeder
 
             $new_character->save();
 
-            $random_item_ids = $faker->randomElements($item_ids, $faker->numberBetween(1,5));      
-            $new_character->items()->attach($random_item_ids, ['qty' => $faker->numberBetween(1,9)]);
+            // Prendo un numero casuale di item
+            $random_item_ids = $faker->randomElements($item_ids, $faker->numberBetween(1,5));
+
+            // Array che conterrà le quantità casuali delle armi
+            $random_qty = []; //[name = 1], [desc = 'bla'], ['qty' => rand(1, 11)];
+
+            // Popolo l'array scorrento gli item generati
+            foreach($random_item_ids as $item_id) {
+                $random_qty[$item_id] = ['qty' => rand(1, 11)];
+            }  
+
+            $new_character->items()->attach($random_qty);
 
         }
     }

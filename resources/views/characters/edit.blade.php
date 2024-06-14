@@ -18,7 +18,7 @@
         </div>
         <div class="mb-3">
             <label for="url_img" class="form-label">Image</label>
-            <input type="text" class="form-control" id="url_img" name="url_img" value="{{old('url_img', "http://127.0.0.1:8000/public/img/img_characters/$character->url_img")}}">
+            <input type="text" class="form-control" id="url_img" name="url_img" value="{{old('url_img', "$character->url_img")}}">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>

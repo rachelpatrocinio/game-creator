@@ -30,9 +30,14 @@
                     {{$character->life}}</li>
                 <li class="mt-3">
                     <strong>Weapons:</strong>
-                    <ul class="p-0 d-flex">
+                    <ul class="p-0">
                         @foreach($character->items as $weapon)
-                        <li class="px-2">{{$weapon->name}}</li>
+                        <div class="d-flex">
+                            <li class="px-2">{{$weapon->name}}:</li>
+                            <li class="px-2">
+                                {{$weapon->pivot->qty}}
+                            </li>
+                        </div>
                         @endforeach
                     </ul>
                 </li>
