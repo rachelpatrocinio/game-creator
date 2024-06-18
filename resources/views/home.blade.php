@@ -64,7 +64,9 @@
         <div class="container">
             <div class="row">
                 <div class="section-title d-flex justify-content-center">
-                    <img src="{{ Vite::asset('public/img/logo/weapons.png') }}" alt="">
+                    <a href="{{ route('items.index') }}">
+                        <img src="{{ Vite::asset('public/img/logo/weapons.png') }}" alt="">
+                    </a>
                 </div>
                 <div class="weapons-list d-flex flex-wrap py-5">
                     @foreach ($items as $item)
@@ -81,7 +83,9 @@
         <div class="container">
             <div class="row">
                 <div class="section-title d-flex justify-content-center">
-                    <img src="{{ Vite::asset('public/img/logo/types.png') }}" alt="">
+                    <a href="{{ route('types.index') }}">
+                        <img src="{{ Vite::asset('public/img/logo/types.png') }}" alt="">
+                    </a>
                 </div>
                 <div class="d-flex flex-wrap py-5 justify-content-around">
                     @foreach ($types as $type)
