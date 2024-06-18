@@ -10,6 +10,7 @@
 
     <title>@yield('title')</title>
 
+    <h1>Test</h1>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
