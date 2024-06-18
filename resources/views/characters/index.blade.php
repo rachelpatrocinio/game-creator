@@ -6,6 +6,7 @@
 <section class="py-5">
     <div class="container">
         <h1>Wooooooooooooooo</h1>
+        <h1>Wooooooooooooooo</h1>
         <div class="row">
             <div class="section-title text-center mb-4">
                 <img src="{{Vite::asset('public/img/logo/characters.png')}}" alt="Characters">
